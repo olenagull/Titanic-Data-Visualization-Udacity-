@@ -15,9 +15,10 @@ The original data set is already cleaned. I only grouped age into categories and
 Since my data does not have any values except counts, my first decision is to show the percentage of Survived vs. Perished people by the passenger calss on a 100% stacked plot. 
 Small animation is added while loading the chart. 
 
-x axis shows the survival status
-y axis shows the percentage of the passengers in each status
-The color shows the passenger class. 
+- x axis shows the survival status
+- y axis shows the percentage of the passengers in each status
+- The color shows the passenger class
+
 The first design is shown in the screenshot: 
 
 ![image](https://user-images.githubusercontent.com/7613690/38734292-4fcecb90-3f25-11e8-8380-d328698e5f0d.png)
