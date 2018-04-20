@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Titanic</title>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+	</head>
+	<body>
+		<p>Titanic Data</p>
+		<div id="chartContainer">
+			<script  type="text/javascript">
+			
+				var svg = dimple.newSvg("#chartContainer",800,400);//creating a SVG with given size
+
+				d3.csv("../data/titanicData.csv",function(data)
+
+				{
+					//create a chart
+					var chart = new dimple.chart(svg,data); 
+					chart.setBounds(65, 50, 505, 310)
+
+					var x = chart.addCategoryAxis("x", ["Survived"]); 
+					x.addOrderRule('Type');
+
+					var y = chart.addPctAxis("y","Count"); 
+
+					var s = chart.addSeries('PassengerClass',dimple.plot.bar);
+					
+					//add legend
+					chart.addLegend(100,10,700,100, 'right');
+					
+					//draw chart with animation
+					chart.draw(1000);
+			
+		
+				});
+			</script>
+		</div>
+		
+	</body>
+</html>
